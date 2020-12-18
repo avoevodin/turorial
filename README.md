@@ -158,5 +158,10 @@ git branch feature_themes # add feature brunch with branch name
                           # like feature_ + 'name of branch'
 git checkout feature_themes # switch to created branch
 # making changes
+git add ...
+git commit 
+git push --set-upstream origin feature_themes
+# You can open showed link, or go to  github and create pull-request
+# (in gitlab merge-request, that equal pull-request in github)
 
 ```
