@@ -108,10 +108,11 @@ bbedit ~/.zshrc # Settings for shell (11 raw is shell name)
 # (ex /Users/avo888/.oh-my-zsh)
 ```
 
-### correcting of theme (ex /Users/avo888/.oh-my-zsh/themes) robbyrussell.zsh-theme
+> correcting of theme (ex /Users/avo888/.oh-my-zsh/themes) robbyrussell.zsh-theme
 
-### Example of settings. 
-### Docs: http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
+> Example of settings. 
+> Docs: http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
+
 ```
 # PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 # PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
