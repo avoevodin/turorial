@@ -85,6 +85,8 @@ git status
 
 ## Second floor
 
+### Installing themes oh-my-zsh: themes for zsh
+
 https://ohmyz.sh/#install # Themes for terminal
 ```
 compaudit | xargs chmod g-w,o-w # after installing, remove permissions on writing for
@@ -92,11 +94,13 @@ compaudit | xargs chmod g-w,o-w # after installing, remove permissions on writin
 
 ``` 
                                 
+### Instructions for Mark-down 
+### https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
-# Print space before command to hide it in history
+#### Print space before command to hide it in history
 
-# Install command-line tools to BBEdit: open BBEdit and BBEdit=>Install
-#  Command Line tools
+### Install command-line tools to BBEdit: open BBEdit and BBEdit=>Install
+### Command Line tools
 
 ```
 bbedit ~/.zshrc # Settings for shell (11 raw is shell name)
@@ -104,10 +108,10 @@ bbedit ~/.zshrc # Settings for shell (11 raw is shell name)
 # (ex /Users/avo888/.oh-my-zsh)
 ```
 
-# correcting of theme (ex /Users/avo888/.oh-my-zsh/themes) robbyrussell.zsh-theme
+### correcting of theme (ex /Users/avo888/.oh-my-zsh/themes) robbyrussell.zsh-theme
 
-# Example of settings. 
-# Docs: http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
+### Example of settings. 
+### Docs: http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
 ```
 # PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 # PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
@@ -120,38 +124,39 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
 ```
-# Settings for Terminal:
-# Terminal: Terminal => Preferences => Homebrew (make default
-# in down the screen) 
-# Right column: Font => Fixed width => PT mono => Bold and Size = 13
+### Settings for Terminal:
+### Terminal: Terminal => Preferences => Homebrew (make default
+### in down the screen) 
+### Right column: Font => Fixed width => PT mono => Bold and Size = 13
 
-# Quit from Less (linux pager): Q or ctrl+c
-# Turn off pager in terminal:
+### Quit from Less (linux pager): Q or ctrl+c
+### Turn off pager in terminal:
 ```
 git config --global core.pager ''
 ```
-# Turn on pager in terminal:
+### Turn on pager in terminal:
 ```
 git config --global core.pager '' 
 ```
-# Set editor to BBEdit (from vim to BBEdit):
+### Set editor to BBEdit (from vim to BBEdit):
 ```
 git config --global core.editor 'bbedit --wait --resume' # wait and resume parametres
                                                 # are for wait in command line and
                                                 # resume after close file
 ```
-# Set editor to VIM:
+### Set editor to VIM:
 ```
 git config --global core.editor 'vim'
 ```
 
-# Branches
-# Master - only approved code = Production
-# Develop - developers branch. Used by developers for test-approved developings.
-#   Code which builds without problems, test passes etc
-# Feature branche - individual branche for each task and each developer.
+### Branches
+### Master - only approved code = Production
+### Develop - developers branch. Used by developers for test-approved developings.
+###           Code which builds without problems, test passes etc
 
-# Creating new branch from master:
+### Feature branche - individual branche for each task and each developer.
+
+### Creating new branch from master:
 ```
 git checkout master # switch to master
 git pull # get last changes from server. Strategy merge (by default)
