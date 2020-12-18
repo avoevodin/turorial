@@ -136,7 +136,9 @@ git config --global core.pager ''
 ```
 # Set editor to BBEdit (from vim to BBEdit):
 ```
-git config --global core.editor 'bbedit'
+git config --global core.editor 'bbedit --wait --resume' # wait and resume parametres
+                                                # are for wait in command line and
+                                                # resume after close file
 ```
 # Set editor to VIM:
 ```
@@ -163,5 +165,4 @@ git commit
 git push --set-upstream origin feature_themes
 # You can open showed link, or go to  github and create pull-request
 # (in gitlab merge-request, that equal pull-request in github)
-
 ```
