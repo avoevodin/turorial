@@ -1,7 +1,11 @@
-# Test repository
-    _This readme-file contains the tutorial for convenient work with git and zsh._ 
+# Test repository for demonstrating best-practices for git and github.
+##### _This readme-file contains the tutorial for convenient work with git and zsh._ 
+---
 
-## brew
+## First level: initial settings for git, first steps in git.
+###### Creating first repository, ssh id RSA keys, git add, commit, push
+
+### brew
 
 * install brew https://brew.sh
 
@@ -24,11 +28,11 @@ brew install python@3.9
 ssh-keygen
 ```
 
-~/.ssh/id_rsa - private part
-~/.ssh/id_rsa.pub - public part (to be uploaded to github)
+> ~/.ssh/id_rsa - private part
+> ~/.ssh/id_rsa.pub - public part (may be uploaded to github)
 
 ```
-cat ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_rsa.pub # show public key in terminal
 ```
 
 ### github
@@ -42,7 +46,6 @@ cat ~/.ssh/id_rsa.pub
 ```
 git config --global user.name "Your Name"
 git config --global user.email your@email.com
-
 ```
 
 * create folder
@@ -65,36 +68,34 @@ git add README.md
 * commit to local repository
 ```
 git commit -m 'added README.md'
-
 ```
 
 * push to remote repository
 ```
 git remote add origin "saved url"
 git push --set-upstream origin master
-
 ```
 
 * git check status
 
 ```
 git status
-
 ```
-
-## Second floor
+---
+## Second level: branches
+###### Working with branches, also tuning the zsh, git and terminal
+---
 
 ### Installing themes oh-my-zsh: themes for zsh
+> https://ohmyz.sh/#install
 
-https://ohmyz.sh/#install # Themes for terminal
 ```
 compaudit | xargs chmod g-w,o-w # after installing, remove permissions on writing for
                                 # owner and group
-
 ``` 
                                 
-### Instructions for Mark-down 
-### https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+> Instructions for Mark-down 
+> https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 #### Print space before command to hide it in history
 
