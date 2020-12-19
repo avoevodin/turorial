@@ -194,3 +194,6 @@ git show selected_commit_hash
 > https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
 
 * Quit from Less (linux pager): Q or ctrl+c
+
+* Invite collaborator
+> https://github.com/avoevodin/test-repository/settings/access
