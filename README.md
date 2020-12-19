@@ -1,4 +1,5 @@
 # Test repository
+## This readme-file contains the tutorial for convenient work with git and zsh.
 
 ## sub header
 
@@ -171,4 +172,14 @@ git commit
 git push --set-upstream origin feature_themes
 # You can open showed link, or go to  github and create pull-request
 # (in gitlab merge-request, that equal pull-request in github)
+```
+
+## pip-env
+## To look at all commits in current branch:
+```
+git log
+```
+## To look at selected commit:
+```
+git show selected_commit_hash
 ```
