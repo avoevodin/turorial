@@ -1,7 +1,5 @@
 # Test repository
-## This readme-file contains the tutorial for convenient work with git and zsh.
-
-## sub header
+###    This readme-file contains the tutorial for convenient work with git and zsh.   
 
 ### brew
 
