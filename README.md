@@ -99,7 +99,7 @@ compaudit | xargs chmod g-w,o-w # after installing, remove permissions on writin
 ``` 
                                 
 ```
-bbedit ~/.zshrc # Settings for shell (11 raw is shell name)
+bbedit ~/.zshrc # Settings for shell (11 raw contains shell name)
 ```
 > if delete dir in 5-th raw, all settings will be deleted 
 > (ex /Users/avo888/.oh-my-zsh)
