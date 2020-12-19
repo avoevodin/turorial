@@ -1,9 +1,9 @@
 # Test repository
-#### _This readme-file contains the tutorial for convenient work with git and zsh._ 
+⋅⋅⋅_This readme-file contains the tutorial for convenient work with git and zsh._⋅⋅⋅ 
 
 ## brew
 
-* intall brew https://brew.sh
+* install brew https://brew.sh
 
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
