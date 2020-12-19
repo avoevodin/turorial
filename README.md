@@ -1,5 +1,5 @@
 # Test repository
-⋅⋅⋅_This readme-file contains the tutorial for convenient work with git and zsh._⋅⋅⋅ 
+    _This readme-file contains the tutorial for convenient work with git and zsh._ 
 
 ## brew
 
