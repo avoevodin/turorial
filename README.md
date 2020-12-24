@@ -82,6 +82,12 @@ git push --set-upstream origin master
 ```
 git status
 ```
+
+* Git abort changes in a file
+
+```
+git checkout file_name.py
+```
 ---
 ## Second level: tuning terminal
 ###### Tuning zsh, git and terminal
