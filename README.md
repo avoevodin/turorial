@@ -84,9 +84,11 @@ git status
 ```
 
 * Git abort changes in a file
+> It's recommended to use -- and set full path of file into
+> the rep-directory
 
 ```
-git checkout file_name.py
+git checkout -- path/to/file_name.py
 ```
 ---
 ## Second level: tuning terminal
