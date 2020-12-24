@@ -83,7 +83,7 @@ git push --set-upstream origin master
 git status
 ```
 
-* Git abort changes in a file
+* Abort changes in a file
 > It's recommended to use -- and set full path of file into
 > the rep-directory
 
