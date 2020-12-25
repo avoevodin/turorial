@@ -82,6 +82,14 @@ git push --set-upstream origin master
 ```
 git status
 ```
+
+* Abort changes in a file
+> It's recommended to use -- and set full path of file into
+> the rep-directory
+
+```
+git checkout -- path/to/file_name.py
+```
 ---
 ## Second level: tuning terminal
 ###### Tuning zsh, git and terminal
