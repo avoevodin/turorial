@@ -205,3 +205,11 @@ git show selected_commit_hash
 
 * Invite collaborator
 > https://github.com/avoevodin/test-repository/settings/access
+
+* Determine file properties
+```
+# Look at some file path (-a means that you'll see all paths for that name)
+which -a python
+# Determine file type and it's properties
+file python
+```
