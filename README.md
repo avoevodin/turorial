@@ -181,6 +181,11 @@ git push --set-upstream origin feature_themes
 # You can open showed link, or go to  github and create pull-request
 # (in gitlab merge-request, that equal pull-request in github)
 ```
+---
+## Third level: branches
+###### Creating new branch and working with it. Types of branches.
+---
+![img.png](pycharm_instruction.png)
 
 ---
 ## Lifehacks
