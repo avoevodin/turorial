@@ -9,13 +9,10 @@
 ### brew
 
 * Install brew https://brew.sh
-
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
-
 * Install python 3.9
-
 ```
 brew search python
 brew install python@3.9
@@ -24,7 +21,6 @@ brew install python@3.9
 ### ssh
 
 * Generate ssh id RSA key private and public
-
 ```
 ssh-keygen
 ```
@@ -48,45 +44,37 @@ cat ~/.ssh/id_rsa.pub # show public key in terminal
 git config --global user.name "Your Name"
 git config --global user.email your@email.com
 ```
-
 * Create folder
 ```
 mkdir ~/Projects/test-repository
 cd ~/Projects/test-repository
 ```
-
 * Init repository
 ```
 git init
 ```
-
 * Create file
 ```
 touch README.md
 git add README.md
 ```
-
 * Commit to local repository
 ```
 git commit -m 'added README.md'
 ```
-
 * Push to remote repository
 ```
 git remote add origin "saved url"
 git push --set-upstream origin master
 ```
-
 * Git check status
 
 ```
 git status
 ```
-
 * Abort changes in a file
 > It's recommended to use -- and set full path of file into
 > the rep-directory
-
 ```
 git checkout -- path/to/file_name.py
 ```
@@ -97,9 +85,8 @@ git checkout -- path/to/file_name.py
 
 * Install command-line tools to BBEdit:
     > open BBEdit and BBEdit => Install Command Line tools
-    
 * Install themes oh-my-zsh: themes for zsh
-> https://ohmyz.sh/#install
+    > https://ohmyz.sh/#install
 
 ```
 compaudit | xargs chmod g-w,o-w # after installing, remove permissions on writing for
@@ -113,11 +100,10 @@ bbedit ~/.zshrc # Settings for shell (11 raw contains shell name)
 > (ex /Users/avo888/.oh-my-zsh)
 
 * Correct of theme (ex /Users/avo888/.oh-my-zsh/themes) robbyrussell.zsh-theme
-
 > Example of settings. 
 > Docs: http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
 
-There's example of corrected settings-file below:
+* There's example of corrected settings-file below:
 ```
 # PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 # PROMPT+=' %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
@@ -188,6 +174,40 @@ git push --set-upstream origin feature_themes
 ![img.png](pycharm_instruction.png)
 
 ---
+## Fourth level: venv
+###### Creating new virtual environment and fixing it in requirements.txt
+---
+
+* Create new virtual environment in "venv" directory
+```shell
+python3 -m venv venv
+```
+* Activate environment in macOS
+```shell
+source venv/bin/activate
+```
+* For example install module in current environment
+```shell
+pip3 install coverage
+```
+* Output installed module and forward it to requirements.txt
+```shell
+pip freeze > requirements.txt
+```
+* Deactivate current virtual environment
+```shell
+deactivate
+```
+* Delete created directory venv
+```shell
+rm -rf venv
+```
+* Repeat steps to create new environment. Install modules from requirements.txt
+```shell
+pip install -r requirements.txt
+```
+
+---
 ## Lifehacks
 ##### Some tricks that make coding more comfortable
 ---
@@ -202,19 +222,23 @@ git show selected_commit_hash
 ```
 * Hide command in history
 > Print space before command to hide it in history
-
 * Instructions for Mark-down 
 > https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
-
 * Quit from Less (linux pager): Q or ctrl+c
-
 * Invite collaborator
 > https://github.com/avoevodin/test-repository/settings/access
-
 * Determine file properties
 ```
 # Look at some file path (-a means that you'll see all paths for that name)
 which -a python
 # Determine file type and it's properties
 file python
+```
+* Install tree utility
+```shell
+brew install tree
+```
+* freeze prints out list of modules installed in current environment
+```shell
+pip freeze
 ```
