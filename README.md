@@ -1,5 +1,5 @@
 # Repository for demonstrating best-practices for git, github, PyCharm etc.
-##### _This readme-file contains the tutorial for convenient work with git, zsh,
+##### This readme-file contains the tutorial for convenient work with git, zsh,
 ##### PyCharm. 
 ---
 
