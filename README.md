@@ -1,5 +1,6 @@
-# Test repository for demonstrating best-practices for git and github.
-##### _This readme-file contains the tutorial for convenient work with git and zsh._ 
+# Repository for demonstrating best-practices for git, github, PyCharm etc.
+##### _This readme-file contains the tutorial for convenient work with git, zsh,
+##### PyCharm. 
 ---
 
 ## First level: initial settings for git, first steps in git.
