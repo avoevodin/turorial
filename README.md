@@ -168,13 +168,13 @@ git push --set-upstream origin feature_themes
 # (in gitlab merge-request, that equal pull-request in github)
 ```
 ---
-## Third level: branches
-###### Creating new branch and working with it. Types of branches.
+## Fourth level: PyCharm
+###### Explore basic tools in PyCharm.
 ---
 ![img.png](pycharm_instruction.png)
 
 ---
-## Fourth level: venv
+## Fifth level: venv
 ###### Creating new virtual environment and fixing it in requirements.txt
 ---
 
