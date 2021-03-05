@@ -101,7 +101,7 @@ GET /path/resource?param1=value1&param2=value2 HTTP/1.1
 > Unlike POST, PUT doesn't suggest that enclosed in request content 
 > will be processed by the server.
 > 
-> **Response isn't cahed**
+> **Response isn't cached**
 
 #### PATCH
 > Method is similarly to PUT, but applies only to the fraction 
@@ -163,7 +163,7 @@ GET /path/resource?param1=value1&param2=value2 HTTP/1.1
   > Client isn't allowed to operate requested resource.
 * 404 - Not Found
 * 405 - Method Not Allowed
-  > Response should enclose allowed methods in the header ALlow.
+  > Response should enclose allowed methods in the header Allow.
 
 #### 5xx - Server Error:
 * 500 - Internal Server Error
@@ -174,7 +174,7 @@ GET /path/resource?param1=value1&param2=value2 HTTP/1.1
 * 503 - Service Unavailable
   > Server is unavailable by technical reasons (maintenance, reboot etc.)
 * 504 - Gateway Timeout
-  > Server as a gate hasn't received respons from the upstream server.
+  > Server as a gate hasn't received response from the upstream server.
 
 ### HTTP Headers.
 * Ex:
