@@ -137,51 +137,21 @@ GET /path/resource?param1=value1&param2=value2 HTTP/1.1
   > Content-Type.
 * 202 - Accepted 
   > Request is accepted for processing.
-* 203 - Non-Authoritative Information
-  > Status is similar to 200, but information was received from another server
-  > or copy of the basic server.
 * 204 - No Content
   > Response contains only headers. Client shouldn't update the content, but can
   > apply received metadata to content.
-* 205 - Reset Content
-  > Server obliges client to reset user's inputted data. Response doesn't contain
-  > message body.
-* 206 _ Partial Content
-  > Success processing of Partial GET request.
-* 207 - Multi-Status
-  > Server returns results of processing several independent operations.
-* 208 - Already Reported
-  > Members of DAV binding have already reported in previous part of Multi-Status
-  > response.
-* 226 - IM used
-  > A-IM header was successfully received from the client.
 
 #### 3xx - Redirection:
-![img.png](301-307.png)
-* 300 - Multiple Choices
-  > URI contains several options for providing a resource.
 * 301 - Moved permanently
   > The requested document was finally transferred to the address, enclosed in field Location.
 * 302 - Moved temporarily or Found
   > The requested document is temporarily available at the address, specified in
   > the field Location.
-* 303 - See Other
-  > The document should be requested from the address in the field Location 
-  > with GET-method.
 * 304 - Not Modified
   > Server returns that code if client use GET-method with headers 
   > If-Modified-Since or If-None-Match and requested document haven't
   > been changed since specified moment. Response shouldn't contain
   > message body.
-* 305 - Use Proxy
-  > Request should be processed through the proxy in field Location.
-  > This response code isn't allowed for a proxy server, only for an original.
-* 307 - Temporary Redirect
-  > Method is similar to 302, but POST/GET method mustn't be changed in the second
-  > request.
-* 308 - Permanent Redirect
-  > Method is similar to 301, but POST/GET method mustn't be changed in the second
-  > request.
 
 #### 4xx - Client Error:
 * 400 - Bad Request
@@ -189,62 +159,15 @@ GET /path/resource?param1=value1&param2=value2 HTTP/1.1
 * 401 - Unauthorized
   > Authentication is required for the resource. In response header
   > should be the field WWW-Authenticate with authentication conditions.
-* 402 - Payment required
 * 403 - Forbidden
   > Client isn't allowed to operate requested resource.
 * 404 - Not Found
 * 405 - Method Not Allowed
   > Response should enclose allowed methods in the header ALlow.
-* 406 - Not Acceptable
-  > The requested URI can't accept characteristics that enclosed in
-  > request's header.
-* 407 - Proxy Authentication Required
-  > Code is similar to 401, but for a proxy server.
-* 408 - Request Timeout
-* 409 - Conflict
-  > Conflict for the resource.
-* 410 - Gone
-  > Resource has been at this URL, but was deleted. Current address is unknown.
-* 411 - Length Required
-  > Client should specify Content-Length in request header.
-* 412 - Precondition Failed
-  > This code returns if all conditional header fields aren't successful.
-* 413 - Payload Too Large
-  > Request body is too large. Response may enclose header Retry-After
-  > if the problem is temporary.
-* 414 - URI Too Long
-  > Also returns when the client tries to transfer too long parameters 
-  > in method GET, not in POST.
-* 415 - Unsupported Media Type
-* 416 - Range Not Satisfiable
-* 417 - Expectation Failed
-* 418 - I'm a teapot
-* 419 - Authentication Timeout (not in RFC 2616)
-* 421 - Misdirected Request
-  > Request was redirected to the server, that isn't allowed to give a response.
-* 422 - Unprocessable Entity
-  > Message body has correct syntax, but it contains a logical error, that's
-  > not able to be processed.
-* 423 - Locked
-  > Target resource is blocked by the pointed method.
-* 424 - Failed Dependency
-  > Depended operation was failed.
-* 425 - Too Early
-  > 
-* 426 - Upgrade Required
-* 428 - Precondition Required
-* 429 - Too Many Requests
-* 431 - Request Header Fields Too Large
-* 449 - Retry With
-* 451 - Unavailable For Legal Reasons
-* 499 - Client Closed Request
 
 #### 5xx - Server Error:
 * 500 - Internal Server Error
   > Any outlaw error.
-* 501 - Not Implemented
-  > Server isn't able to process the request. Usually this response
-  > returns when method isn't supported.
 * 502 - Bad Gateway
   > Server as a gate has received invalid response from the upstream
   > server.
@@ -252,24 +175,42 @@ GET /path/resource?param1=value1&param2=value2 HTTP/1.1
   > Server is unavailable by technical reasons (maintenance, reboot etc.)
 * 504 - Gateway Timeout
   > Server as a gate hasn't received respons from the upstream server.
-* 505 - HTTP Version Not Supported
-* 506 - Variant Also Negotiates
-* 507 - Insufficient Storage
-  > The free space isn't enough for completing current request.
-* 508 - Loop Detected
-  > Server finds out an infinite loop.
-* 509 - Bandwidth Limit Exceeded
-  > Web-site has exceeded the limit of traffic.
-* 510 - Not Extended
-  > The requested extension is absent on the server.
-* 511 - Network Authentication Required
-  > This response is return by the proxy server, not by the origin, when it
-  > needs to authenticate user in this proxy.
-* 520 - Unknown Error
-* 521 - Web Server Is Down
-* 522 - Connection Timeout
-* 523 - Origin is Unreachable
-* 524 - A Timeout Occurred
-* 525 - SSL Handshake Failed
-* 526 - Invalid SSL Certificate
 
+### HTTP Headers.
+* Ex:
+```http request
+Server: Apache/2.2.11 (Win32) PHP/5.3.0
+Last-Modified: Sat, 16 Jan 2010 21:16:42 GMT
+Content-Type: text/plain; charset=windows-1251
+Content-Language: ru
+```
+* Ex of multi-line headers:
+    1. Wrong:
+    ```http request
+        content-type: text/html;
+                      charset=windows-1251
+        Allow: GET, HEAD
+        Content-Length: 356
+        ALLOW: GET, OPTIONS
+        Content-Length:   1984
+    ```
+    2. Correct:
+    ```http request
+        Content-Type: text/html;charset=windows-1251
+        Allow: GET,HEAD,OPTIONS
+        Content-Length: 1984
+    ```
+
+#### Headers Hierarchy:
+1. General Headers - headers of any message: client or server.
+2. Request Headers - headers of client's message.
+3. Response Headers - headers of server's message.
+4. Entity Headers - headers of entity in a message.
+
+#### Headers in HTML:
+```html
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=windows-1251">
+<meta http-equiv="Content-Language" content="ru">
+```
