@@ -109,12 +109,12 @@ Content-Type: application/json
 Content-Length: 136
 
 {
-"Account_id": 448192,
-"Passport": 1243 345654,
-"BirthDate: "1990-02-08",
-"Account_Expires": "2021-05-01",
+"account_id": 448192,
+"passport": 1243 345654,
+"birth_date: "1990-02-08",
+"account_expires": "2021-05-01",
 "leverage": 10000,
-"Currency": USD 
+"currency": "USD" 
 }
 
 -------delimiter--
@@ -129,15 +129,15 @@ Content-Type: application/json
 Content-Length: 188s
 
 {
-"Account_id": 448192,
-"Name": "Ad Aloy",
-"Passport": 1243 345654,
-"BirthDate: "1990-02-08",
-"Account_Expires": "2021-05-01",
+"account_id": 448192,
+"name": "ad aloy",
+"passport": 1243 345654,
+"birth_date: "1990-02-08",
+"account_expires": "2021-05-01",
 "leverage": 10000,
-"Currency": USD,
-"Passport_Is_Verified": yes,
-"Photo_Is_Verified": no
+"currency": "USD",
+"passport_is_verified": 1,
+"photo_is_verified": 0
 }
 ```
 
@@ -169,7 +169,7 @@ Content-Length: 185
 
 {
 "donor_id": 123,
-"donor_name": Kindman,
+"donor_name": "Kindman",
 "cert_id": 8348448,
 "cert_type_id": 4,
 "cert_type": "Unlimited access for add analytics",
@@ -204,7 +204,7 @@ Content-Length: 167
 
 {
 "donor_id": 123,
-"donor_name": Kindman,
+"donor_name": "Kindman",
 "cert_type_id": 4,
 "cert_type": "Unlimited access for add analytics",
 "sum": 10000,
