@@ -47,7 +47,7 @@ Content-Length: 185
 
 {
 "sum": 10000,
-"receiver_id": "123"
+"receiver_id": "123",
 "receiver": "Andrew",
 "payer_id": 344,
 "payer": "Elia",
@@ -169,13 +169,13 @@ Content-Length: 185
 
 {
 "donor_id": 123,
-"donor_name": Kindman
-"cert_id": 8348448
+"donor_name": Kindman,
+"cert_id": 8348448,
 "cert_type_id": 4,
-"cert_type": "Unlimited access for add analytics"
+"cert_type": "Unlimited access for add analytics",
 "sum": 5000,
-"recepient_id": 888
-"recepient": "Lucky Man";
+"recepient_id": 888,
+"recepient": "Lucky Man"
 }
 ```
 
@@ -204,12 +204,12 @@ Content-Length: 167
 
 {
 "donor_id": 123,
-"donor_name": Kindman
+"donor_name": Kindman,
 "cert_type_id": 4,
-"cert_type": "Unlimited access for add analytics"
+"cert_type": "Unlimited access for add analytics",
 "sum": 10000,
-"recepient_id": 888
-"recepient": "Lucky Man";
+"recepient_id": 888,
+"recepient": "Lucky Man"
 }
 ```
 
