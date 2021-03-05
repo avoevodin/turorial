@@ -174,6 +174,12 @@ git push --set-upstream origin feature_themes
 ---
 ![img.png](pycharm_instruction.png)
 
+* To update the trial period use:
+```shell
+chmod +x reset.once.sh
+./reset.once.sh
+```
+
 ---
 ## Fifth level: venv
 ###### Creating new virtual environment and fixing it in requirements.txt
@@ -242,4 +248,9 @@ brew install tree
 * freeze prints out list of modules installed in current environment
 ```shell
 pip freeze
+```
+* For removing attribute of the file:
+```shell
+xattr -r -d com.apple.quarantine reset.once.sh
+xattr reset.once.sh # For check attributes.
 ```
