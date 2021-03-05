@@ -111,10 +111,10 @@ Content-Length: 136
 {
 "account_id": 448192,
 "passport": 1243 345654,
-"birth_date: "1990-02-08",
-"account_expires": "2021-05-01",
 "leverage": 10000,
-"currency": "USD" 
+"currency": "USD",
+"birth_date: "1990-02-08",
+"account_expires": "2021-05-01"
 }
 
 -------delimiter--
@@ -130,7 +130,7 @@ Content-Length: 188s
 
 {
 "account_id": 448192,
-"name": "ad aloy",
+"name": "Ad Aloy",
 "passport": 1243 345654,
 "birth_date: "1990-02-08",
 "account_expires": "2021-05-01",
