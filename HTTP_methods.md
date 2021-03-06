@@ -298,7 +298,7 @@ Content-Type: application/json
 "date": "2021-03-06T112:24:48.512Z"
 }
 ```
-* Response Fail:
+* Response OK:
 ```http request
 HTTP/1.1 200 OK
 Host: andre-money.ru
