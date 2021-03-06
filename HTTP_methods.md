@@ -243,6 +243,29 @@ Content-Length: 194
 }
 ```
 
+## PUT in webDAV
+* Request:
+```http request
+PUT /path/file.pdf HTTP/1.1
+Host: andrew-money.ru
+Accept: application/json
+Content-Length: 60024
+Content-Type: application/pdf
+
++-----------------------------------------+
+|             binary pdf data             |
++-----------------------------------------+
+```
+* Response:
+```http request
+HTTP/1.1 201 Created
+Server: nginx/1.18.0
+Date: Sat, 06 Mar 2021 06:24:30 GMT
+Location: http://andrew-money.ru/path/file.pdf
+Connection: keep-alive
+Content-Length: 0
+```
+
 ## PATCH
 * Request:
 ```http request
