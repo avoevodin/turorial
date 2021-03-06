@@ -109,7 +109,7 @@ Content-disposition: form-data; name="profile_id"
 -------delimiter
 Content-disposition: form-data; name="passport"
 
-"1243 345654"
+1243 345654
 -------delimiter
 Content-disposition: form-data; name="leverage"
 
@@ -117,15 +117,15 @@ Content-disposition: form-data; name="leverage"
 -------delimiter
 Content-disposition: form-data; name="currency"
 
-"USD"
+USD
 -------delimiter
 Content-disposition: form-data; name="birth_date"
 
-"1990-02-08"
+1990-02-08
 -------delimiter
 Content-disposition: form-data; name="account_expires"
 
-"2021-05-01"
+2021-05-01
 -------delimiter--
 ```
 * Response:
