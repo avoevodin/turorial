@@ -62,7 +62,7 @@ Content-Length: 185
 POST /api/gift_certificate/ HTTP/1.1
 Host: andrew-money.ru
 User-agent: Mozilla/5.0
-Accept: application/pdf
+Accept: application/json
 Content-Type: application/json
 Content-Length: 68 
 
@@ -79,10 +79,17 @@ HTTP/1.1 201 Created
 Server: nginx/1.19.1
 Date: Fri, 05 Mar 2021 02:58:39 GMT
 Location: https://andrew-money.ru/api/gift_certificate/8348448
-Content-Type: application/pdf
-Content-Length: ...
+Content-Type: application/json
+Content-Length: 116
 
-Pdf in binary
+{
+"donor_id": 123,
+"donor": "Kindman",
+"cert_type_id": 4,
+"cert_type": "Full access",
+"sum": 5000,
+"recepient_id": 888
+}
 ```
 
 ### multipart/form-data
@@ -219,8 +226,17 @@ Content-Length: 167
 DELETE /api/gift_certificate/8348448 HTTP/1.1
 Host: andrew-money.ru
 User-agent: Mozilla/5.0
+Accept: */*
 ```
 * Response:
 ```http request
 HTTP/1.1 403 Forbidden
+Content-Length: ...
+Content-Type: application/json
+Host: andre-money.ru
+
+{
+"server_message": "Server error occurred",
+"date": "2021-03-06T112:24:48.512Z"
+}
 ```
