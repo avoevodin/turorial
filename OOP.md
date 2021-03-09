@@ -89,7 +89,7 @@ SomeClass.hello() # Hello, class SomeClass
 ```
 
 ## Association
-> When one object is a part of second object, it's called the association.
+> When one object is a part of second object, it's called an association.
 * Composition - is an association when a child object lifecycle is similar
 with a parent object lifecycle.
 ```python
