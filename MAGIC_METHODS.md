@@ -254,7 +254,7 @@ class Closer:
         try:
            self.obj.close()
         except AttributeError: # object hasn't close-method
-           print 'Not closable.'
+           print("Not closable.")
            return True # except is caught
 ```
 ```shell
