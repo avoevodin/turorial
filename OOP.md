@@ -151,7 +151,6 @@ dog.className # Mammal
 ```
 * Example of overload:
 > Methods is called from the end of hierarchy.
-
 ```python
 class Mammal:
     className = "Mammal"
