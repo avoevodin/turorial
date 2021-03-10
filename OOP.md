@@ -151,21 +151,26 @@ dog.className # Mammal
 ```
 * Example of overload:
 > Methods is called from the end of hierarchy.
+
 ```python
-class Mammal():
-    className = 'Mammal'
-    
+class Mammal:
+    className = "Mammal"
+
     def drink_milk(self, litres):
-        return "Mammals drink milk." 
-        
+        return "Mammals drink milk about " + litres + " litres \
+            per hour."
+
+
 class Dog(Mammal):
-    species = 'Canis lupus'
-    
+    species = "Canis lupus"
+
     def drink_milk(self, litres):
-        return "Dogs drink milk."
+        return "Dogs drink milk about " + litres + " litres \
+            per hour."
+
 
 dog = Dog()
-dog.drink_milk() # Dogs drink milk.
+dog.drink_milk(5)  # Dogs drink milk about 5 litres per hour.
 ```
 * Multiple Inheritance:
 > Is an inheritance, when the child has more than one parent.
