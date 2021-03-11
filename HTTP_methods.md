@@ -24,7 +24,7 @@ Set-Cookie: ....
 
 ## POST
 
-### X-FORM-URLENCODED request
+### X-WWW-FORM-URLENCODED request
 * Request:
 ```http request
 POST /api/order/ HTTP/1.1
