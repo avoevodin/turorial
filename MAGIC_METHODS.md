@@ -25,9 +25,6 @@ class FileObject:
 
 ## Comparison operators
 > Methods for operators of comparison.
-
-* ```__cmp__``` - returns 0 if self == other, -1 if self < other and 1 if 
-  self > other.
 * ```__eq__ and __ne__``` - define '==' and '!=' operators.
 * Separate methods for comparison operators:
 ```python
@@ -87,8 +84,7 @@ class Word(str):
 * ```__str__(self)``` - behavior for str() function. It's usually used by users.
 * ```__repr__(self)``` - behaviour for repr() function. It's usually used by
   machine-oriented print out.
-* ```__unicode__(self)``` - behavior for unicode() function. Returns str 
-  in Unicode.
+* ```__bytes__(self)``` - method for functions of creating bytes massives.
 > etc.
 
 ## Attributes access control
@@ -104,7 +100,7 @@ def __setattr__(self, name, value):
     # There will be an infinite recursion.
 
 def __setattr__(self, name, value):
-    self.__dict__[name] = value # assingment to dict of class variables
+    self.__dict__[name] = value # assignment to dict of class variables
     # next define any behavior 
 ```
 2. Example of access control:
@@ -237,7 +233,6 @@ with open('foo.txt') as bar:
         Method returns the main value for operating into the CM-block.
     2. __exit__(self, exception_type, exception_value, traceback) - defines
         actions after completing CM-block or after it getting interrupted.
-       
 ```python
 class Closer:
     """Context manager for auto close object with close-method in
@@ -265,11 +260,44 @@ class Closer:
 ...
 # output omitted for brevity
 >>> conn.dir()
-# long AttributeError message, can't use a connection that's closed
+# long AttributeError message, can't use a closed connection
 >>> with Closer(int(5)) as i:
 ...     i += 1
 ...
 Not closable.
 >>> i
 6
+```
+
+## Abstract Base Classes
+> https://docs.python.org/2/library/abc.html
+
+## Descriptors
+> https://habr.com/ru/post/479824/
+
+## Copying
+```__copy__(self)``` - shallow copy of the object (obj.copy()). All data 
+    links to data of the original object.
+```__deepcopy(self, memodict={})``` - full copy of the object and its data.
+
+## Pickle and Serializing
+* Example of serializing with pickle:
+```python
+import pickle
+
+data = {'foo': [1, 2, 3],
+        'bar': ('Hello', 'world!'),
+        'baz': True}
+jar = open('data.pkl', 'wb')
+jar.close()
+pickle.dump(data, jar) # write serialized data to jar
+```
+* Example of reading serialized data with pickle:
+```python
+import pickle
+
+pkl_file = open('data.pkl', 'rb') # open
+data = pickle.load(pkl_file) # save to the variable
+print(data)
+pkl_file.close()
 ```
