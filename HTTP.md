@@ -214,3 +214,58 @@ Content-Language: ru
 <meta http-equiv="Content-Type" content="text/html;charset=windows-1251">
 <meta http-equiv="Content-Language" content="ru">
 ```
+
+### HTML-form for HTTP requests
+
+#### GET request in HTML-form
+* Example:
+```html
+<form action="http://foo.com" method="get">
+  <div>
+    <label for="say">What greeting do you want to say?</label>
+    <input name="say" id="say" value="Hi">
+  </div>
+  <div>
+    <label for="to">Who do you want to say it to?</label>
+    <input name="to" id="to" value="Mom">
+  </div>
+  <div>
+    <button>Send my greetings</button>
+  </div>
+</form>
+```
+> Result URL:
+> </br>www.foo.com/?say=Hi&to=Mom
+-----
+> Result HTTP-request:
+```http request
+GET /?say=Hi&to=Mom HTTP/2.0
+Host: foo.com
+```
+
+#### POST request in HTML-form
+```html
+<form action="http://foo.com" method="post">
+  <div>
+    <label for="say">What greeting do you want to say?</label>
+    <input name="say" id="say" value="Hi">
+  </div>
+  <div>
+    <label for="to">Who do you want to say it to?</label>
+    <input name="to" id="to" value="Mom">
+  </div>
+  <div>
+    <button>Send my greetings</button>
+  </div>
+</form>
+```
+----
+> Result HTTP-request:
+```http request
+POST / HTTP/2.0
+Host: foo.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 13
+
+say=Hi&to=Mom
+```
