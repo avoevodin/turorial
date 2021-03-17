@@ -254,3 +254,8 @@ pip freeze
 xattr -r -d com.apple.quarantine reset.once.sh
 xattr reset.once.sh # For check attributes.
 ```
+
+* For using code with no quality assurance use comment:
+```python
+# noqa
+```
