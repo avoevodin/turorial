@@ -259,3 +259,14 @@ xattr reset.once.sh # For check attributes.
 ```python
 # noqa
 ```
+
+* After system update install xcode:
+```shell
+xcode-select --install
+```
+* Example of heredoc
+```shell
+psql -U polls -d polls -h localhost << __SQL__
+select * from django_content_type;
+__SQL__
+```
