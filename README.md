@@ -270,3 +270,5 @@ psql -U polls -d polls -h localhost << __SQL__
 select * from django_content_type;
 __SQL__
 ```
+* Constructor of bash rc
+>http://bashrcgenerator.com
