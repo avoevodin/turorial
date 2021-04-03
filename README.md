@@ -174,7 +174,8 @@ git push --set-upstream origin feature_themes
 ---
 ![img.png](pycharm_instruction.png)
 
-* To update the trial period use:
+* To update the trial period use. Two separate command. If it doesn't work,
+  check for the apple quarantine as in instruction below:
 ```shell
 chmod +x reset.once.sh
 ./reset.once.sh
