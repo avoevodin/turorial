@@ -10,13 +10,21 @@
 ### brew
 
 * Install brew https://brew.sh
-```
+```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 * Install python 3.9
-```
+```shell
 brew search python
 brew install python@3.9
+```
+* Install libpq
+```shell
+brew install libpq
+```
+* Install postgresql
+```shell
+brew install postgresql
 ```
 
 ### ssh
