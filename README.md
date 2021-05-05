@@ -281,3 +281,7 @@ __SQL__
 ```
 * Constructor of bash rc
 >http://bashrcgenerator.com
+* Normalize date:
+```shell
+date -r 2945823512358
+```
