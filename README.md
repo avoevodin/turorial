@@ -285,3 +285,8 @@ __SQL__
 ```shell
 date -r 2945823512358
 ```
+* uuid generation:
+```python
+from uuid import uuid4
+key = uuid4().hex
+```
