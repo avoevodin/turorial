@@ -290,3 +290,9 @@ date -r 2945823512358
 from uuid import uuid4
 key = uuid4().hex
 ```
+* upgrade
+* Upgrade 
+```shell
+pip install --upgrade django
+# update requirements.txt
+```
