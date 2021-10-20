@@ -307,3 +307,12 @@ python3 ./manage.py dumpdata --exclude=sessions --exclude=contenttypes \
 docker rm -f $(docker ps -a -q)
 docker system prune --all --volumes
 ```
+
+* Pass txt file to docker command:
+```shell
+cat /Users/avo888/Projects/brigadier/brigadier/bd_dump.json | docker run --name brigadier-createsuperuser \
+        --hostname brigadier-createsuperuser \
+        --rm -i --env-file .env \
+        brigadier-django \
+        python3 manage.py loaddata --format json -
+```
