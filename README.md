@@ -316,3 +316,11 @@ cat /Users/avo888/Projects/brigadier/brigadier/bd_dump.json | docker run --name 
         brigadier-django \
         python3 manage.py loaddata --format json -
 ```
+> or
+```shell
+docker run --name brigadier-createsuperuser \
+        --hostname brigadier-createsuperuser \
+        --rm -i --env-file .env \
+        brigadier-django \
+        sh -c "python3 manage.py loaddata --format json -" < /Users/avo888/Projects/brigadier/brigadier/bd_dump.json
+```
