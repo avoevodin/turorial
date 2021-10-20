@@ -296,3 +296,8 @@ key = uuid4().hex
 pip install --upgrade django
 # update requirements.txt
 ```
+* dump data from DB
+```shell
+python3 ./manage.py dumpdata --exclude=sessions --exclude=contenttypes \
+--exclude=home --exclude=auth --exclude=admin --indent=4 > bd_dump.json --traceback
+```
