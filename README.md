@@ -301,3 +301,9 @@ pip install --upgrade django
 python3 ./manage.py dumpdata --exclude=sessions --exclude=contenttypes \
 --exclude=home --exclude=auth --exclude=admin --indent=4 > bd_dump.json --traceback
 ```
+
+* Clean all docker containers and images:
+```shell
+docker rm -f $(docker ps -a -q)
+docker system prune --all --volumes
+```
