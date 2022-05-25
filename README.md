@@ -324,3 +324,13 @@ docker run --name brigadier-createsuperuser \
         brigadier-django \
         sh -c "python3 manage.py loaddata --format json -" < /Users/avo888/Projects/brigadier/brigadier/bd_dump.json
 ```
+
+* If you have an error with installing of psycopg2: "ld: library not found for -lssl" and etc:
+> export LDFLAGS:
+```shell
+export LDFLAGS="-L/usr/local/opt/openssl/lib"
+```
+> this var you can see while looking at openssl info:
+```shell
+brew info openssl
+```
