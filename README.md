@@ -324,3 +324,8 @@ docker run --name brigadier-createsuperuser \
         brigadier-django \
         sh -c "python3 manage.py loaddata --format json -" < /Users/avo888/Projects/brigadier/brigadier/bd_dump.json
 ```
+
+* Solving problem with installing psycopg2:
+```shell
+LDFLAGS="-I/usr/local/opt/openssl@3/include -L/usr/local/opt/openssl@3/lib"
+```
