@@ -329,3 +329,7 @@ docker run --name brigadier-createsuperuser \
 ```shell
 LDFLAGS="-I/usr/local/opt/openssl@3/include -L/usr/local/opt/openssl@3/lib"
 ```
+> this var you can see while looking at openssl info:
+```shell
+brew info openssl
+```
