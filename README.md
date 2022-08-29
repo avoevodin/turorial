@@ -333,3 +333,7 @@ LDFLAGS="-I/usr/local/opt/openssl@3/include -L/usr/local/opt/openssl@3/lib"
 ```shell
 brew info openssl
 ```
+> or
+```shell
+brew --prefix openssl
+```
