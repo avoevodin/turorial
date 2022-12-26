@@ -338,12 +338,12 @@ brew info openssl
 brew --prefix openssl
 ```
 * Solving problem with imports in the project.
-    * Example of the error msg:
+> Example of the error msg:
 ```
 from app.api.api_v1.api import api_router
 ModuleNotFoundError: No module named 'app'
 ```
-    * Solution is to correct set path in PYTHONPATH env. It should contain path to the parent folder of your 'app' folder. For example your app folder in the some_proj folder (some_project/app):
+> Solution is to set correct path to PYTHONPATH env. It should contain path to the parent folder of your 'app' folder. For example your app folder in the some_proj folder (some_project/app):
 ```shell
-export PYTHONPATH=/Users/some_user/Projects/some_project/
+export PYTHONPATH=/Users/some_user/Projects/some_project
 ```
